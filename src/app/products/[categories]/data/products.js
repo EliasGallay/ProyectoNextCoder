@@ -6,6 +6,7 @@ export const productsDB = [
     price: 799,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "smartphone-x1",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const productsDB = [
     price: 49,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "camisa-casual",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const productsDB = [
     price: 1299,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "laptop-pro",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const productsDB = [
     price: 89,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "zapatillas-running",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const productsDB = [
     price: 149,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "auriculares-bluetooth",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const productsDB = [
     price: 69,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "pantalon-jeans",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const productsDB = [
     price: 299,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "tablet-10",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const productsDB = [
     price: 29,
     image: "https://via.placeholder.com/150",
     category: "books",
+    slug: "libro-react-para-principiantes",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const productsDB = [
     price: 999,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "camara-fotografica",
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const productsDB = [
     price: 39,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "remera-estampada",
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ export const productsDB = [
     price: 399,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "monitor-27-4k",
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const productsDB = [
     price: 35,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "camiseta-deportiva",
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ export const productsDB = [
     price: 45,
     image: "https://via.placeholder.com/150",
     category: "books",
+    slug: "libro-clean-code",
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ export const productsDB = [
     price: 129,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "teclado-mecanico-rgb",
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ export const productsDB = [
     price: 59,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "vestido-floral",
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ export const productsDB = [
     price: 32,
     image: "https://via.placeholder.com/150",
     category: "books",
+    slug: "libro-javascript-the-good-parts",
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ export const productsDB = [
     price: 120,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "disco-ssd-1tb",
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ export const productsDB = [
     price: 120,
     image: "https://via.placeholder.com/150",
     category: "clothing",
+    slug: "campera-de-invierno",
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ export const productsDB = [
     price: 99,
     image: "https://via.placeholder.com/150",
     category: "electronics",
+    slug: "parlante-inteligente",
   },
   {
     id: 20,
@@ -158,5 +177,6 @@ export const productsDB = [
     price: 40,
     image: "https://via.placeholder.com/150",
     category: "books",
+    slug: "libro-eloquent-javascript",
   },
 ];

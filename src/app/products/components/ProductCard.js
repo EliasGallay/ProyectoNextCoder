@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProductCard = ({ product }) => {
   return (
     <div
@@ -13,6 +15,13 @@ const ProductCard = ({ product }) => {
       <p className="text-gray-600 mb-2">{product.description}</p>
       <p className="text-xl font-bold">${product.price}</p>
       <p className="text-sm text-gray-500 mt-2">Category: {product.category}</p>
+
+      <Link
+        className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200"
+        href={`/products/details/${product.slug}`}
+      >
+        View Details
+      </Link>
     </div>
   );
 };
