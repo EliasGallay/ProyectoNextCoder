@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image"; // ✅ importamos el componente Image
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
   { name: "Inicio", href: "/" },
-  { name: "Productos", href: "/products" },
+  { name: "Productos", href: "/products/all" },
   { name: "Sobre nosotros", href: "/about" },
   { name: "Contacto", href: "/contact" },
   { name: "Carrito", href: "/cart" },
@@ -42,7 +42,7 @@ export function Navbar() {
           <Image
             src="https://flowbite.com/docs/images/logo.svg"
             alt="Flowbite Logo"
-            width={32} // ✅ ajusta el tamaño a lo necesario
+            width={32}
             height={32}
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

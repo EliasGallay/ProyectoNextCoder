@@ -1,3 +1,6 @@
+import ProductCard from "../components/ProductCard";
+import { productsDB } from "./data/products";
+
 export async function generateMetadata({ params, searchParams }, parent) {
   const { categories } = await params;
   return {
@@ -9,6 +12,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 export default async function CategoryPage({ params }) {
   const { categories } = await params;
+  const products =
+    categories === "all"
+      ? productsDB
+      : productsDB.filter((product) => product.category === categories);
 
   return (
     <div className="container mx-auto p-4">
@@ -19,6 +26,12 @@ export default async function CategoryPage({ params }) {
       <p>
         More details about products in this category will be available soon.
       </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 }
