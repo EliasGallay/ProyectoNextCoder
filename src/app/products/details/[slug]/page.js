@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { productsDB } from "../../[categories]/data/products";
+import { productsDB } from "../../../api/data/products";
 
 export default async function DetailPage({ params }) {
   const { slug } = await params;

@@ -9,6 +9,7 @@ const links = [
   { name: "Sobre nosotros", href: "/about" },
   { name: "Contacto", href: "/contact" },
   { name: "Carrito", href: "/cart" },
+  { name: "Blog", href: "/post" },
 ];
 
 function NavLink({ links }) {

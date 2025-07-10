@@ -1,8 +1,8 @@
 import ProductCard from "../components/ProductCard";
-import { productsDB } from "./data/products";
 
-export async function generateMetadata({ params, searchParams }, parent) {
-  const { categories } = await params;
+export async function generateMetadata({ params }, parent) {
+  const { categories } = params;
+
   return {
     title: `Products of ${categories}`,
     description: `Explore products in the ${categories} category.`,
@@ -11,7 +11,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
 }
 
 export default async function CategoryPage({ params }) {
-  const { categories } = await params;
+  const { categories } = params;
+
+  const res = await fetch("http://localhost:3000/api/products", {
+    cache: "no-store",
+  });
+  const productsDB = await res.json();
+
   const products =
     categories === "all"
       ? productsDB
