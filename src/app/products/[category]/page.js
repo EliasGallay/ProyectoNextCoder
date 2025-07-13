@@ -1,17 +1,17 @@
 import ProductCard from "../components/ProductCard";
 
 export async function generateMetadata({ params }, parent) {
-  const { categories } = await params;
+  const { category } = await params;
 
   return {
-    title: `Products of ${categories}`,
-    description: `Explore products in the ${categories} category.`,
-    keywords: ["Products", "E-Commerce", "Shopping", categories],
+    title: `Products of ${category}`,
+    description: `Explore products in the ${category} category.`,
+    keywords: ["Products", "E-Commerce", "Shopping", category],
   };
 }
 
 export default async function CategoryPage({ params }) {
-  const { categories } = await params;
+  const { category } = await params;
 
   const res = await fetch("http://localhost:3000/api/products", {
     cache: "no-store",
@@ -19,15 +19,15 @@ export default async function CategoryPage({ params }) {
   const productsDB = await res.json();
 
   const products =
-    categories === "all"
+    category === "all"
       ? productsDB
-      : productsDB.filter((product) => product.category === categories);
+      : productsDB.filter((product) => product.category === category);
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Products in {categories}</h1>
+      <h1 className="text-2xl font-bold mb-4">Products in {category}</h1>
       <p className="mb-4">
-        Explore our wide range of products in the {categories} category.
+        Explore our wide range of products in the {category} category.
       </p>
       <p>
         More details about products in this category will be available soon.
