@@ -15,16 +15,19 @@ export default async function PostPage({ params }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-zinc-950">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
-        <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-700 mb-4">{post.body}</p>
-        <p className="text-gray-500">Post ID: {post.id}</p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-zinc-900 to-zinc-800 p-4">
+      <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-2xl w-full max-w-xl transition-all duration-300 hover:scale-[1.01]">
+        <h1 className="text-3xl font-semibold text-white mb-6 tracking-wide">
+          {post.title}
+        </h1>
+        <p className="text-zinc-300 mb-4 leading-relaxed">{post.body}</p>
+        <p className="text-sm text-zinc-400 mb-6">Post ID: {post.id}</p>
+
         <Link
           href="/post"
-          className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+          className="inline-block px-6 py-2 rounded-lg bg-blue-600 text-white font-medium transition hover:bg-blue-700 hover:shadow-md"
         >
-          Back to Posts
+          ← Back to Posts
         </Link>
       </div>
     </div>

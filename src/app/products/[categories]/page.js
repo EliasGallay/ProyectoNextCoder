@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 
 export async function generateMetadata({ params }, parent) {
-  const { categories } = params;
+  const { categories } = await params;
 
   return {
     title: `Products of ${categories}`,
@@ -11,7 +11,7 @@ export async function generateMetadata({ params }, parent) {
 }
 
 export default async function CategoryPage({ params }) {
-  const { categories } = params;
+  const { categories } = await params;
 
   const res = await fetch("http://localhost:3000/api/products", {
     cache: "no-store",
